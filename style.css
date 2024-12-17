@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -8,91 +8,163 @@
     height: 100vh;
     background-size: 100% 100%;
 }
-.container .navbar{
+
+.container .navbar {
     width: 100%;
     height: 100px;
     background: rgba(72, 60, 79, 0.4);
+    display: flex; /* Navbar için Flexbox */
+    justify-content: space-between; /* Logo ve menü arasında boşluk bırak */
+    align-items: center; /* Dikey hizalama */
+    padding: 0 50px; /* Sağ-sol boşluk ekle */
+    box-sizing: border-box;
 }
 
-.navbar .logo{
-    display: inline-block;
-    margin-left: 50px;
-    margin-top: 17px;
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+.navbar .logo img{
+    
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin-right: 10px; /* Logo ile yazı arasında boşluk bırak */
     
 }
 
-.navbar .logo a{
-text-decoration: none;
-font-size: 60px;
-font-family: sans-serif;
-color: rgb(102, 0, 152);
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 40px;
+    font-family: sans-serif;
+    color: rgb(102, 0, 152);
+    
 }
 
-.navbar ul{
-    float: right;
-    margin-right: 20px;
-}   
-
-.navbar ul li{
+.navbar ul {
+    display: flex; /* Menü öğelerini yatay hizala */
     list-style: none;
-    display: inline-block;
-    margin: 0 8px;
-    line-height: 100px;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar ul li a{
+.navbar ul li {
+    margin: 0 10px; /* Menü öğeleri arasına boşluk bırak */
+}
+
+.navbar ul li a {
     color: beige;
     text-decoration: none;
     font-size: 22px;
     padding: 6px 13px;
     font-family: sans-serif;
-    transition: .4s;
+    transition: 0.4s;
+    line-height: normal; /* Line height normalleştir */
 }
 
 .navbar ul li a.active,
-.navbar ul li a:hover{
+.navbar ul li a:hover {
     background-color: rgb(102, 0, 152);
     border-radius: 3px;
 }
 
-.container .center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-family: sans-serif;
+/* Yeni Eklenen Bölümler */
+.hero {
+    text-align: center;
+    color: black;
+    margin-top: 100px;
 }
 
-.container h1{
-    color: black;
+.hero h1 {
     font-size: 60px;
-    text-align: center;
     font-weight: bold;
-    width: 900px;
-}
-.container h2{
-    color: black;
-    font-size: 80px;
-    text-align: center;
-    font-weight: bold;
-    width: 900px;
-}
-.center .buttons{
-    margin: 35px 290px;
 }
 
-.buttons button{
-    height: 50px; 
-    width: 150px; 
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
     font-size: 18px;
     color: azure;
     background: rgba(102, 0, 152, 1);
     border-radius: 25px;
-    cursor: pointer;
-    outline: none;
-    border: solid 1px azure;
-} 
-.buttons button:hover{
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.hero .btn:hover {
     background: rgb(162, 0, 152);
-    transition: .4s;
+}
+
+/* Vizyon ve Misyon */
+.vision-mission {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.vision-mission div {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vision-mission h2 {
+    color: rgb(102, 0, 152);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.vision-mission p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Ekibimiz */
+.team {
+    text-align: center;
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.team h1 {
+    font-size: 40px;
+    color: rgb(102, 0, 152);
+    margin-bottom: 20px;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(102, 0, 152, 0.8);
+    margin-bottom: 10px;
+}
+
+.team-member h2 {
+    font-size: 20px;
+    color: rgb(102, 0, 152);
+    margin: 5px 0;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #333;
 }

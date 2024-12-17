@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBT Web Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdu9Ttl9Qn5WQo-xJ0ZPAUCos6n-z9o-E"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="wbt-logo.jpg" alt="Italian Trulli" style="width: 80px;height: 80px;border-radius: 20px;">
+
+
+                <a href="index.html" >WhiteBirdTech</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about-us.html">Hakkimizda</a></li>
+                <li><a href="team.html">Ekibimiz</a></li>
+                <li><a href="contact.html" class="active">İletişim</a></li>
+
+            </ul>
+        </div>
+        <div class="hero">
+            
+            
+            <div class="contact-container">
+                <!-- Üstte Bize Ulaşın Başlığı -->
+                <h1 class="contact-title">Bize Ulaşın</h1>
+                
+                <!-- Bilgi Kartları -->
+                <div class="contact-info">
+                    <!-- Telefon 1 -->
+                    <div class="info-box">
+                        <h3>Telefon 1</h3>
+                        <p>+90 552 052 52 52</p>
+                    </div>
+                    <!-- Telefon 2 -->
+                    <div class="info-box">
+                        <h3>Linkedin</h3>
+                        <p>linkedin.com/WhiteBirdTech</p>
+                    </div>
+                    <!-- Mail -->
+                    <div class="info-box">
+                        <h3>Email</h3>
+                        <p>info@whitebirdtech.com</p>
+                    </div>
+                </div>
+        
+               <!-- Harita ve Konum Bilgisi -->
+                <div class="map-info-container">
+                    <div class="map-container">
+                        <div id="map"></div>
+                    </div>
+                <!-- Konum Bilgisi -->
+                <div class="location-info">
+                    <h3>Konum:</h3>
+                    <p>Koçcuğaz, Akkuş/Ordu</p>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <script>
+        function initMap() {
+            // Harita konumunu Ordu Akkuş olarak ayarlama
+            const location = { lat: 40.79306, lng: 37.01639 }; // Akkuş, Ordu koordinatları
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 13,
+                center: location,
+            });
+
+            // Marker ekleme
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+
+        // Sayfa yüklendiğinde haritayı başlat
+        window.onload = initMap;
+    </script>
+</body>
+</html>

@@ -57,7 +57,7 @@ color: rgb(102, 0, 152);
 
 .container .center{
     position: absolute;
-    top: 50%;
+    top: 28%;
     left: 50%;
     transform: translate(-50%,-50%);
     font-family: sans-serif;
@@ -77,22 +77,58 @@ color: rgb(102, 0, 152);
     font-weight: bold;
     width: 900px;
 }
-.center .buttons{
-    margin: 35px 290px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-.buttons button{
-    height: 50px; 
-    width: 150px; 
-    font-size: 18px;
-    color: azure;
-    background: rgba(102, 0, 152, 1);
-    border-radius: 25px;
-    cursor: pointer;
-    outline: none;
-    border: solid 1px azure;
-} 
-.buttons button:hover{
-    background: rgb(162, 0, 152);
-    transition: .4s;
+.gallery {
+    margin-top: 400px;
+    display: flex; /* Yanyana sıralama için flex kullanılır */
+    justify-content: space-around; /* Elemanlar arasında boşluk bırakır */
+    align-items: flex-start; /* Dikey hizalama */
+    padding: 20px;
+}
+
+.gallery-item {
+    text-align: center; /* Resim ve açıklamaları ortalar */
+    max-width: 30%; /* Genişlik sınırı */
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%; /* Resimler kutuya tam oturur */
+    height: auto;
+    display: block;
+}
+
+.description {
+    padding: 10px;
+}
+
+.description p {
+    margin: 10px 0;
+    font-size: 30px;
+    color: #333;
+}
+
+.description a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.description a:hover {
+    text-decoration: underline;
+    color: #0056b3;
 }
